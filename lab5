@@ -1,0 +1,41 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lab_8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //вводим длину массива с клавиатуры
+            Console.WriteLine("Введите длину массива");
+            int lenght = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            int[] massive = new int[lenght];
+            for (int i = 0; i < lenght; i++)
+            {
+                //Вводим значения элементов массива
+                Console.WriteLine("Введите значения элементов массива");
+                massive[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (int i = 0;i < lenght; i++)
+            {
+                if (massive[i] == i) 
+                {
+                   sum = sum + massive[i];  
+                }
+            }
+            Console.WriteLine(sum);
+            Console.ReadLine(); 
+            
+
+
+
+        }
+    }
+}
